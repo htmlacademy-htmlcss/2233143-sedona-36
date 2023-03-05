@@ -25,12 +25,12 @@
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <img src="images/search.svg" width="20" height="20">
+              <img src="images/icon-search.svg" alt="Поиск по сайту" width="20" height="20">
               <span class="visually-hidden">Поиск</span></a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <img src="images/favourites.svg" width="44" height="64">
+              <img src="images/icon-favourites.svg" alt="Избранное то что вам понравилось" width="18" height="17">
               <span class="visually-hidden">Избранное</span></a>
           </li>
           <li class="navigation-item">
@@ -42,11 +42,11 @@
     <main class="main-inner">
         <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
-            <img src="images/filter-catalog.jpg" width="1200" height="412">
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">Главная</a>
-                <img src="images/arrow.svg" width="7" height="10">
+                <img src="images/go-home.svg" alt="На главную страницу" width="12" height="12">
+                <img src="images/arrow.svg" alt="Стрелочка к гостиницам" width="7" height="10">
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link">Гостиницы</a>
@@ -107,7 +107,9 @@
           <label>
             <p>Стоимость, ₽</p>
  <input type="text" name="amount" value="0"> от
- <input type="text" name="amount" value="9000"> до
+</label>
+ <label>
+  <input type="text" name="amount" value="9000"> до
           </label>
 <input type="range" min="0" max="9000">
 
@@ -117,16 +119,32 @@
 </section>
 
 <section class="catalog-of-hotel-options">
-  <h3>Найдено гостиниц: 38</h3>
+  <div class="catalog-of-hotel-options-header">
+  <h2>Найдено гостиниц: 38</h2>
   <select class="select-control" aria-label="Сортировка">
     <option value="cheap">Сначала дешёвые</option>
     <option value="expensive">Сначала дорогие</option>
     <option value="hit-of-sales">Сначала хит продаж</option>
-    <img src="images/arrow-sorting.svg" width="12" height="7">
-    <img class="sorting-icon" src="images/sorting-icon-1.svg" width="48" height="48">
-    <img class="sorting-icon" src="images/sorting-icon-2.svg" width="48" height="48">
-    <img class="sorting-icon" src="images/sorting-icon-3.svg" width="48" height="48">
 </select>
+<img src="images/arrow-sorting.svg" alt="Стрелочка выбор варианта" width="12" height="7">
+<ul class="View">
+  <li class="View-item">
+    <a href="#">
+    <img class="View-sorting-icon" src="images/sorting-icon-1.svg" alt="Сортировка показать значками" width="48" height="48">
+</a>
+  </li>
+  <li class="View-item">
+    <a href="#">
+      <img class="View-sorting-icon" src="images/sorting-icon-2.svg" alt="Сортировка показать карточками" width="16" height="14">
+    </a>
+  </li>
+  <li class="View-item">
+    <a href="#">
+      <img class="View-sorting-icon" src="images/sorting-icon-3.svg" alt="Сортировка показать спичком" width="16" height="14">
+    </a>
+  </li>
+</ul>
+  </div>
 
 <a href="#" class="button button-light">
           <span class="visually-hidden">Показать список</span>
@@ -135,53 +153,106 @@
           <span class="visually-hidden">Показать карточки</span>
         </a>
 
-        <ul class="product-list">
-        <li class="product-card">
-          <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="images/hotel-1.jpg" alt="Горное ущелье" width="300" height="212">
-            <h3 class="product-card-title">Amara Resort & Spa</h3>
+        <div class="hotel-card">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="images/hotel-1.jpg" alt="Горное ущелье" width="300" height="212">
+            <h3 class="hotel-card-title">Amara Resort & Spa</h3>
           </a>
-          <b class="product-price">Гостиница</b>
-<b class="product-price">от 4000 ₽</b>
-          <a class="product-card-button button" href="#">Подробнее</a>
-          <button class="card-add">В избранное</button>
-          <img class="rating-star" src="images/star.svg" width="18" height="17">
-        </li>
+          <p class="hotel-card-detail">
+            <span>Гостиница</span>
+            <span>от 4000 ₽</span>
+          </p>
+          <div class="hotel-card-actions">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button card-add" type="button">В избранное</button>
+          </div>
+          <div class="rating">
+            <ul class="rating-stars">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+              </li>
+            </ul><span class="rating-label">Рейтинг: 8,5</span>
+          </div>
+        </div>
 
- <li class="product-card">
-  <a class="product-card-link" href="product.html">
-    <img class="product-card-image" src="images/hotel-2.jpg" alt="Пейзаж горы" width="300" height="212">
-    <h3 class="product-card-title">Villas at Poco Diablo</h3>
-  </a>
-  <b class="product-price">Гостиница</b>
-<b class="product-price">от 5000 ₽</b>
-  <a class="product-card-button button" href="#">Подробнее</a>
-  <button class="card-add">В избранное</button>
-</li>
+        <div class="hotel-card">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="images/hotel-2.jpg" alt="Красивый пейзаж скалы и радуга" width="300" height="212">
+            <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+          </a>
+          <p class="hotel-card-detail">
+            <span>Гостиница</span>
+            <span>от 5000 ₽</span>
+          </p>
+          <div class="hotel-card-actions">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button card-add" type="button">В избранное</button>
+          </div>
+          <div class="rating">
+            <ul class="rating-stars">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+              </li>
+            </ul><span class="rating-label">Рейтинг: 9,2</span>
+          </div>
+        </div>
 
-<li class="product-card">
-  <a class="product-card-link" href="product.html">
-    <img class="product-card-image" src="images/hotel-3.jpg" alt="Гора" width="300" height="212">
-    <h3 class="product-card-title">Desert Quail Inn</h3>
-  </a>
-  <b class="product-price">Гостиница</b>
-<b class="product-price">от 2500 ₽</b>
-  <a class="product-card-button button" href="#">Подробнее</a>
-  <button class="card-add">В избранное</button>
-</li>
+        <div class="hotel-card">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="images/hotel-3.jpg" alt="Пейзаж гора на фоне неба" width="300" height="212">
+            <h3 class="hotel-card-title">Desert Quail Inn</h3>
+          </a>
+          <p class="hotel-card-detail">
+            <span>Гостиница</span>
+            <span>от 2500 ₽</span>
+          </p>
+          <div class="hotel-card-actions">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button card-add" type="button">В избранное</button>
+          </div>
+          <div class="rating">
+            <ul class="rating-stars">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+              </li>
+            </ul><span class="rating-label">Рейтинг: 6,9</span>
+          </div>
+        </div>
 
-<li class="product-card">
-  <a class="product-card-link" href="product.html">
-    <img class="product-card-image" src="images/hotel-4.jpg" alt="Скала" width="300" height="212">>
-    <h3 class="product-card-title">GreenTree Inn</h3>
-  </a>
-  <b class="product-price">Гостиница</b>
-<b class="product-price">от 1500 ₽</b>
-  <a class="product-card-button button" href="#">Подробнее</a>
-  <button class="card-add">В избранное</button>
-</li>
-</ul>
+        <div class="hotel-card">
+          <a class="hotel-card-link" href="#">
+            <img class="hotel-card-image" src="images/hotel-4.jpg" alt="Скала на фоне звездного неба" width="300" height="212">
+            <h3 class="hotel-card-title">GreenTree Inn</h3>
+          </a>
+          <p class="hotel-card-detail">
+            <span>Гостиница</span>
+            <span>от 1500 ₽</span>
+          </p>
+          <div class="hotel-card-actions">
+            <a class="button" href="#">Подробнее</a>
+            <button class="button card-add" type="button">В избранное</button>
+          </div>
+          <div class="rating">
+            <ul class="rating-stars">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></svg>
+                </li>
+            </ul><span class="rating-label">Рейтинг: 5,0</span>
+          </div>
+        </div>
 
+
+
+<ul>
 <li class="pagination-item">
   <a class="pagination-link pagination-current">1</a>
 </li>
@@ -200,10 +271,9 @@
   </a>
 </li>
 </ul>
-<button class="button pagination-show-more" type="button">Показать ещё</button>
 </section>
 
-  <section class="section subscribe">
+  <section class="section-subscribe">
         <h2 class="title">Подпишитесь на рассылку</h2>
         <p class="description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/">
@@ -218,19 +288,19 @@
     <ul class="social-list">
       <li class="social-item">
         <a class="social-button" href="#">
-          <img class="advantage-icon" src="images/icon-vk.svg" width="47" height="40">
+          <img class="social-icon" src="images/icon-vk.svg" alt="Перейти на страницу ВК" width="47" height="40">
 <span class="visually-hidden">ВК</span>
         </a>
       </li>
       <li class="social-item">
         <a class="social-button" href="#">
-          <img class="advantage-icon" src="images/icon-telegram.svg" width="47" height="40">
+          <img class="social-icon" src="images/icon-telegram.svg" alt="Перейти в Телеграмм канал" width="47" height="40">
           <span class="visually-hidden">Телеграмм</span>
         </a>
       </li>
      <li class="social-item">
         <a class="social-button" href="#">
-          <img class="advantage-icon" src="images/icon-youtube.svg" width="47" height="40">
+          <img class="social-icon" src="images/icon-youtube.svg" alt="Перейти на канал в Ютубе" width="47" height="40">
 <span class="visually-hidden">Ютуб</span>
         </a>
       </li>
@@ -239,7 +309,7 @@
     <a href="tel:+7(812)8121212">+7 (812) 812-12-12</a>
 
     <a class="button-link" href="https://htmlacademy.ru">
-      <img class="logo" src="images/logo-html.svg" width="115" height="33">
+      <img class="logo" src="images/logo-html.svg" alt="Логотип html академии" width="115" height="33">
 <span class="visually-hidden">HTML-Academy</span>
     </a>
   </div>
