@@ -14,7 +14,7 @@
         </a>
         <nav class="navigation">
           <ul class="navigation-list">
-            <li class="navigation-list-item-current">
+            <li class="navigation-list-item current">
               <a class="navigation-link" href="#">Главная</a>
             </li>
             <li class="navigation-list-item">
@@ -38,11 +38,11 @@
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">Хочу сюда</a>
-            </div>
             </li>
           </ul>
         </nav>
       </header>
+    </div>
 <main class="main-index main-container">
 <section class="hero">
           <h1 class="visually-hidden">Sedona</h1>
@@ -128,17 +128,17 @@
 
         <section class="section">
           <h2 class="title">Заинтересовались?</h2>
-          <p class="description">Укажите продполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
+          <p class="description">Укажите продполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a class="button button-hotel-search" href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
         </section>
 
-        <section class="section-subscribe">
+        <section class="section-subscribe subscribe-decor">
           <h2 class="title-white">Подпишитесь на рассылку</h2>
           <p class="description-white">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/">
-            <input type="text" placeholder="Ваш e-mail">
-            <img class="calendar-icon" src="images/date.svg" alt="Календарь выбрать дату" width="16" height="15">
-            <button type="submit">Подписаться</button>
+            <label for="email-field" class="visually-hidden">Поле ввода почты</label>
+            <input class="placeholder" name="email" id="email-field" type="email" placeholder="Ваш e-mail">
+            <button type="submit" class="button subscription-button">Подписаться</button>
           </form>
         </section>
       </div>
