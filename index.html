@@ -38,12 +38,12 @@
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">Хочу сюда</a>
-            </div>
             </li>
           </ul>
         </nav>
       </header>
-<main>
+    </div>
+<main class="main-index main-container">
 <section class="hero">
           <h1 class="visually-hidden">Sedona</h1>
           <img class="decorative-logo" src="images/welcome.svg" alt="Добро пожаловать в Седону" width="457" height="351">
@@ -64,6 +64,7 @@
               </div>
               <img class="advantage-image" src="images/real-city.jpg" alt="Тихий городок" width="800" height="385">
             </li>
+
             <li class="advantage-item">
               <div class="advantage-content-block-two">
                 <h3 class="advantage-title">Небольшая площадь</h3>
@@ -82,6 +83,7 @@
                 <p class="advantage-description">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
+
             <li class="advantage-item">
               <img class="advantage-image" src="images/devil-bridge.jpg" alt="Мост из песчаных скал" width="800" height="385">
               <div class="advantage-content-block-one">
@@ -126,19 +128,20 @@
 
         <section class="section">
           <h2 class="title">Заинтересовались?</h2>
-          <p class="description">Укажите продполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
+          <p class="description">Укажите продполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a class="button button-hotel-search" href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
         </section>
 
-        <section class="section-subscribe">
+        <section class="section-subscribe subscribe-decor">
           <h2 class="title-white">Подпишитесь на рассылку</h2>
           <p class="description-white">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/">
-            <input type="text" placeholder="Ваш e-mail">
-            <img class="calendar-icon" src="images/date.svg" alt="Календарь выбрать дату" width="16" height="15">
-            <button type="submit">Подписаться</button>
+            <label for="email-field" class="visually-hidden">Поле ввода почты</label>
+            <input class="placeholder" name="email" id="email-field" type="email" placeholder="Ваш e-mail">
+            <button type="submit" class="button subscription-button">Подписаться</button>
           </form>
         </section>
+      </div>
       </main>
 
       <footer class="page-footer">

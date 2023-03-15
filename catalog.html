@@ -43,12 +43,12 @@
         <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
-              <li class="breadcrumbs-item">
+              <li class="breadcrumbs-devider">
                 <a class="breadcrumbs-link" href="index.html">Главная</a>
                 <img src="images/go-home.svg" alt="На главную страницу" width="12" height="12">
                 <img src="images/arrow.svg" alt="Стрелочка к гостиницам" width="7" height="10">
               </li>
-              <li class="breadcrumbs-item">
+              <li class="breadcrumbs-devider">
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
@@ -104,17 +104,23 @@
             </li>
             </ul>
           </fieldset>
-          <label>
-            <p>Стоимость, ₽</p>
- <input type="text" name="amount" value="0"> от
-</label>
- <label>
-  <input type="text" name="amount" value="9000"> до
-          </label>
-<input type="range" min="0" max="9000">
-
+          <div class="catalog-filter-group">
+            <span class="catalog-filter-title">Стоимость, ₽</span>
+            <div class="catalog-filter-price">
+            <div class="catalog-filter-price-col">
+ <input id="start" type="text" name="amount" value="0">
+<label for="start">от</label>
+</div>
+<div class="catalog-filter-price-col">
+  <input id="end" type="text" name="amount" value="9000">
+  <label for="end">до</label>
+</div>
+</div>
+</div>
+<div class="catalog-filter-group column">
 <button class="button" type="submit">Применить</button>
 <button class="button" input type="reset">Сбросить</button>
+</div>
 </form>
 </section>
 
@@ -126,33 +132,33 @@
     <option value="expensive">Сначала дорогие</option>
     <option value="hit-of-sales">Сначала хит продаж</option>
 </select>
-<img src="images/arrow-sorting.svg" alt="Стрелочка выбор варианта" width="12" height="7">
-<ul class="View">
-  <li class="View-item">
+<ul class="view">
+  <li class="view-item">
     <a href="#">
-    <img class="View-sorting-icon" src="images/sorting-icon-1.svg" alt="Сортировка показать значками" width="48" height="48">
+    <img class="view-sorting-icon" src="images/sorting-icon-1.svg" alt="Сортировка показать значками" width="48" height="48">
 </a>
   </li>
-  <li class="View-item">
+  <li class="view-item">
     <a href="#">
-      <img class="View-sorting-icon" src="images/sorting-icon-2.svg" alt="Сортировка показать карточками" width="16" height="14">
+      <img class="view-sorting-icon" src="images/sorting-icon-2.svg" alt="Сортировка показать карточками" width="16" height="14">
     </a>
   </li>
-  <li class="View-item">
+  <li class="view-item">
     <a href="#">
-      <img class="View-sorting-icon" src="images/sorting-icon-3.svg" alt="Сортировка показать спичком" width="16" height="14">
+      <img class="view-sorting-icon" src="images/sorting-icon-3.svg" alt="Сортировка показать спичком" width="16" height="14">
     </a>
   </li>
 </ul>
   </div>
 
-<a href="#" class="button button-light">
+
+<a href="#" class="button-button-light">
           <span class="visually-hidden">Показать список</span>
         </a>
         <a class="button" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
-
+<section class="catalog">
         <div class="hotel-card">
           <a class="hotel-card-link" href="#">
             <img class="hotel-card-image" src="images/hotel-1.jpg" alt="Горное ущелье" width="300" height="212">
@@ -249,10 +255,11 @@
             </ul><span class="rating-label">Рейтинг: 5,0</span>
           </div>
         </div>
+      </section>
 
 
 
-<ul>
+<ul class="pagination">
 <li class="pagination-item">
   <a class="pagination-link pagination-current">1</a>
 </li>
@@ -277,8 +284,9 @@
         <h2 class="title">Подпишитесь на рассылку</h2>
         <p class="description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/">
-          <input type="text" placeholder="Ваш e-mail">
-          <button type="submit">Подписаться</button>
+          <label for="email-field" class="visually-hidden">Поле ввода почты</label>
+          <input class="placeholder" name="email" id="email-field" type="email" placeholder="Ваш e-mail">
+          <button type="submit" class="button subscription-button">Подписаться</button>
         </form>
       </section>
 </main>
